@@ -1,0 +1,8 @@
+model,dataset,regime,validation_accuracy_percent
+ResNet-50 teacher,CIFAR-100,-,52.47
+MobileNetV2 baseline,CIFAR-100,Baseline,40.92
+MobileNetV2 distilled,CIFAR-100,Distilled,46.26
+SqueezeNet baseline,CIFAR-100,Baseline,16.09
+SqueezeNet distilled,CIFAR-100,Distilled,34.95
+EfficientNet-Lite0 baseline,CIFAR-100,Baseline,46.37
+EfficientNet-Lite0 distilled,CIFAR-100,Distilled,50.32

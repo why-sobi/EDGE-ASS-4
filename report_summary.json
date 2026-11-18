@@ -1,0 +1,226 @@
+{
+  "hardware_training": "Kaggle 1x NVIDIA T4 GPU",
+  "dataset_recorded": "CIFAR-100",
+  "teacher_final_validation_accuracy_percent": 52.47,
+  "knowledge_distillation": [
+    [
+      "ResNet-50 teacher",
+      "CIFAR-100",
+      "-",
+      52.47
+    ],
+    [
+      "MobileNetV2 baseline",
+      "CIFAR-100",
+      "Baseline",
+      40.92
+    ],
+    [
+      "MobileNetV2 distilled",
+      "CIFAR-100",
+      "Distilled",
+      46.26
+    ],
+    [
+      "SqueezeNet baseline",
+      "CIFAR-100",
+      "Baseline",
+      16.09
+    ],
+    [
+      "SqueezeNet distilled",
+      "CIFAR-100",
+      "Distilled",
+      34.95
+    ],
+    [
+      "EfficientNet-Lite0 baseline",
+      "CIFAR-100",
+      "Baseline",
+      46.37
+    ],
+    [
+      "EfficientNet-Lite0 distilled",
+      "CIFAR-100",
+      "Distilled",
+      50.32
+    ]
+  ],
+  "nas": [
+    [
+      1,
+      3,
+      [
+        32,
+        32,
+        32
+      ],
+      [
+        3,
+        3,
+        3
+      ],
+      [
+        "depthwise_separable",
+        "standard",
+        "depthwise_separable"
+      ],
+      "leaky_relu",
+      14143,
+      2.18,
+      90.2953
+    ],
+    [
+      2,
+      4,
+      [
+        64,
+        16,
+        128,
+        32
+      ],
+      [
+        5,
+        3,
+        3,
+        3
+      ],
+      [
+        "standard",
+        "standard",
+        "standard",
+        "standard"
+      ],
+      "silu",
+      73092,
+      4.44,
+      53.4347
+    ],
+    [
+      3,
+      5,
+      [
+        16,
+        32,
+        16,
+        128,
+        64
+      ],
+      [
+        5,
+        5,
+        3,
+        5,
+        5
+      ],
+      [
+        "depthwise_separable",
+        "depthwise_separable",
+        "depthwise_separable",
+        "depthwise_separable",
+        "standard"
+      ],
+      "relu",
+      216095,
+      3.97,
+      17.559
+    ],
+    [
+      4,
+      4,
+      [
+        16,
+        64,
+        32,
+        16
+      ],
+      [
+        3,
+        3,
+        5,
+        3
+      ],
+      [
+        "depthwise_separable",
+        "standard",
+        "depthwise_separable",
+        "standard"
+      ],
+      "leaky_relu",
+      19503,
+      3.64,
+      123.3773
+    ],
+    [
+      5,
+      5,
+      [
+        16,
+        128,
+        16,
+        64,
+        128
+      ],
+      [
+        5,
+        3,
+        3,
+        3,
+        5
+      ],
+      [
+        "depthwise_separable",
+        "standard",
+        "standard",
+        "depthwise_separable",
+        "depthwise_separable"
+      ],
+      "silu",
+      61551,
+      5.19,
+      72.5357
+    ]
+  ],
+  "nas_champion": {
+    "trial": 4,
+    "parameters": 19503,
+    "proxy_accuracy_percent": 3.64,
+    "score": 123.3773,
+    "final_validation_accuracy_percent": 20.71,
+    "config": {
+      "depth": 4,
+      "channels": [
+        16,
+        64,
+        32,
+        16
+      ],
+      "kernels": [
+        3,
+        3,
+        5,
+        3
+      ],
+      "conv_types": [
+        "depthwise_separable",
+        "standard",
+        "depthwise_separable",
+        "standard"
+      ],
+      "activation": "leaky_relu"
+    }
+  },
+  "onnx_cpu_benchmark": {
+    "provider": "CPUExecutionProvider",
+    "batch_size": 1,
+    "mean_latency_ms": 1.456,
+    "p50_latency_ms": 1.228,
+    "p95_latency_ms": 2.568,
+    "throughput_images_per_sec": 686.74,
+    "model_size_bytes": 9591631,
+    "model_size_mb": 9.147,
+    "python_traced_peak_bytes": 10283,
+    "warmup_runs": 10,
+    "measured_runs": 100
+  }
+}

@@ -1,0 +1,2 @@
+provider,batch_size,mean_latency_ms,p50_latency_ms,p95_latency_ms,throughput_images_per_sec,model_size_bytes,model_size_mb,python_traced_peak_bytes,warmup_runs,measured_runs
+CPUExecutionProvider,1,1.456,1.228,2.568,686.74,9591631,9.147,10283,10,100
