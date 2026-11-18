@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local datasets and runtime caches
+data/
+.cache/
+
+# Temporary inspection files
+notebook_summary.txt
+pdf_text.txt
+
+# Generated chart (the report already includes it)
+accuracy_chart.png
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
